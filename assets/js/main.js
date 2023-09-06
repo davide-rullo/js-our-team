@@ -48,6 +48,9 @@ le informazioni di nome, ruolo e la stringa della foto*/
 
 for (const key in teamMembers) {
     console.log(teamMembers[key]);
+    console.log(teamMembers[key].name)
+    console.log(teamMembers[key].role)
+    console.log(teamMembers[key].picture)
 }
 
 
