@@ -72,16 +72,17 @@ for (const key in teamMembers) {
 //bonus
 
 const formEL = document.getElementById('add-member');
-
+let randomNumber = 1;
 formEL.addEventListener('submit', function (e) {
     e.preventDefault();
+    randomNumber++
     let userName = document.getElementById("username").value;
     let userRole = document.getElementById("role").value;
     console.log(userName);
     console.log(userRole);
     rowEL.innerHTML += `<div class="col-12 col-md-4 mt-2 mb-2">
     <div class="card">
-        <div class="card-img"><img src="https://picsum.photos/200/300" alt></div>
+        <div class="card-img"><img src="https://picsum.photos/200/300?random=${randomNumber}" alt></div>
         <div class="card-footer text-center"> <h3>${userName}</h3> <p>${userRole}</p></div>
     </div>
     </div>`
