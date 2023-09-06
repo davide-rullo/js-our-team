@@ -57,4 +57,14 @@ for (const key in teamMembers) {
 /* MILESTONE 2:
 Stampare le stesse informazioni su DOM sottoforma di stringhe*/
 
+const rowEL = document.querySelector(".row")
 
+for (const key in teamMembers) {
+
+rowEL.innerHTML += `<div class="col-12 col-md-4 mt-2 mb-2">
+<div class="card">
+    <div class="card-img"><img src="${teamMembers[key].picture}" alt></div>
+    <div class="card-footer text-center"> <h3>${teamMembers[key].name}</h3> <p>${teamMembers[key].role}</p></div>
+</div>
+</div>`
+}
